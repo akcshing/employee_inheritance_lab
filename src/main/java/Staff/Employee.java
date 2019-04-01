@@ -1,11 +1,12 @@
 package Staff;
 
 public class Employee {
+
     private String name;
     private String NInumber;
-    private int salary;
+    private double salary;
 
-    public Employee(String name, String NInumber, int salary){
+    public Employee(String name, String NInumber, double salary){
         this.name = name;
         this.NInumber = NInumber;
         this.salary = salary;
@@ -27,13 +28,20 @@ public class Employee {
         this.NInumber = NInumber;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
 
+    public void raiseSalary(double salaryIncrement) {
+        setSalary(this.salary + salaryIncrement);
+    }
+
+    public double payBonus() {
+        return this.getSalary()*0.01;
+    }
 }
